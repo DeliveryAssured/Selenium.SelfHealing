@@ -5,7 +5,7 @@
 
 namespace Sample.NUnit
 {
-    public class AssemblyParallelismAttributes
+    public class ParallelismSettings
     {
     }
 }
