@@ -1,14 +1,14 @@
 # Selenium.WebDriver.SelfHealing
 
-Selenium.WebDriver.SelfHealing uplifts the native Selenium and makes it particularly suitable for the hardest to automate slow dynamic applications like Pega & Salesforce. Tried and tested in the toughest environments, it will bring stability to your Flaky Tests or rapidly changing UI.
-
 Selenium.WebDriver.SelfHealing is the first to bring Selenium self-healing capabilities natively to the .Net Platform.
+
+Selenium.WebDriver.SelfHealing uplifts the native Selenium and makes it particularly suitable for the hardest to automate slow dynamic applications like Pega / Salesforce. Tried and tested in the toughest environments, it will bring stability to your Flaky Tests or rapidly changing UI.
 
 Innovative self-healing algorithm, mixed with auto-wait and selector optimization will allow you to deliver your next project on time.
 
-Getting started is easy, self-healing does not require external network access and no servers need to be hosted.
+Getting started is easy, Selenium.WebDriver.SelfHealing does not require external network access and no servers need to be hosted.
 
-[<img src="https://raw.githubusercontent.com/DeliveryAssured/Selenium.WebDriver.SelfHealing/master/docs/images/healing-report.png">](https://htmlpreview.github.io/?https://raw.githubusercontent.com/DeliveryAssured/Selenium.WebDriver.SelfHealing/master/sample-healing-report/index.html)
+[![Live self-healing report](https://raw.githubusercontent.com/DeliveryAssured/Selenium.WebDriver.SelfHealing/master/docs/images/healing-report.png)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/DeliveryAssured/Selenium.WebDriver.SelfHealing/master/sample-healing-report/index.html)
 
 ## Documentation
 
@@ -58,7 +58,7 @@ var selfHealingDriver = chromeDriver.ToSelfHealingDriver();
 
 **Self-healing**. Selenium.WebDriver.SelfHealing will repair broken selectors on the fly. Saving you time and money. Elements can change attributes or position and still be self-healed.
 
-**Auto-wait**. Selenium.WebDriver.SelfHealing waits for elements to be actionable prior to performing actions. Auto-wait will search for interactable in preference. The combination of the **Auto-wait** and **Self-healing** eliminate the need for artificial timeouts - primary cause of flaky tests.
+**Auto-wait**. Selenium.WebDriver.SelfHealing waits for elements to be actionable prior to performing actions. Auto-wait will search for interactable elements in preference. The combination of the **Auto-wait** and **Self-healing** eliminate the need for artificial timeouts - primary cause of flaky tests.
 
 **Selector-optimization**. While your scripts are running, we analyse the chosen selector and provide optimization suggestions.
 
