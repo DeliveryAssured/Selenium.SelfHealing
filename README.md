@@ -1,6 +1,12 @@
 # Selenium.WebDriver.SelfHealing
 
-Selenium.WebDriver.SelfHealing is particularly suited to the most demanding automation challenges. It's Auto-wait feature combined with self-healing and selector optimizations makes automating the most dynamic sites easy.
+Selenium.WebDriver.SelfHealing uplifts the native Selenium and makes it particularly suitable for the hardest to automate slow dynamic applications like Pega & Salesforce. Tried and tested in the toughest environments, it will bring stability to your Flaky Tests or rapidly changing UI.
+
+Selenium.WebDriver.SelfHealing is the first to bring Selenium self-healing capabilities natively to the .Net Platform.
+
+Innovative self-healing algorithm, mixed with auto-wait and selector optimization will allow you to deliver your next project on time.
+
+Getting started is easy, self-healing does not require external network access and no servers need to be hosted.
 
 [<img src="https://raw.githubusercontent.com/DeliveryAssured/Selenium.WebDriver.SelfHealing/master/docs/images/healing-report.png">](https://htmlpreview.github.io/?https://raw.githubusercontent.com/DeliveryAssured/Selenium.WebDriver.SelfHealing/master/sample-healing-report/index.html)
 
@@ -8,9 +14,9 @@ Selenium.WebDriver.SelfHealing is particularly suited to the most demanding auto
 
 ---
 
-Selenium.WebDriver.SelfHealing is an addon to Selenium.WebDriver framework for Web Testing and Automation. Selenium.WebDriver.SelfHealing is built to enable cross-browser web automation that is ever-green, capable, reliable and suitable for the modern dynamic web.
+Selenium.WebDriver.SelfHealing is an addon to Selenium.WebDriver platform for Web Testing and Automation. Selenium.WebDriver.SelfHealing is built to enable cross-browser web automation that is ever-green, capable, reliable and suitable for the modern dynamic web.
 
-Bring resilience to your Selenium scripts through it's ability to fix broken selectors on the fly.
+Bring resilience to your Selenium scripts through it's ability to self-heal broken selectors on the fly.
 
 ## Installation
 
@@ -18,7 +24,7 @@ Bring resilience to your Selenium scripts through it's ability to fix broken sel
 
 Selenium.WebDriver.SelfHealing is distributed as a NuGet package.
 
-### Using commandline
+### Using command-line
 
 The easiest way to get started is to run the following command.
 
