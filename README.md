@@ -2,7 +2,7 @@
 
 Selenium.WebDriver.SelfHealing is particularly suited to the most demanding automation challenges. It's Auto-wait feature combined with self-healing and selector optimizations makes automating the most dynamic sites easy.
 
-![Selenium.WebDriver.SelfHealing Report][healing-report]
+[![Selenium.WebDriver.SelfHealing Report][healing-report]]([live-report])
 
 ## Documentation
 
@@ -80,3 +80,4 @@ var selfHealingDriver = chromeDriver.ToSelfHealingDriver();
 
 [healing-logs]: https://raw.githubusercontent.com/DeliveryAssured/Selenium.WebDriver.SelfHealing/master/docs/images/healing-logs.png
 [healing-report]: https://raw.githubusercontent.com/DeliveryAssured/Selenium.WebDriver.SelfHealing/master/docs/images/healing-report.png
+[live-report]: https://htmlpreview.github.io/?https://raw.githubusercontent.com/DeliveryAssured/Selenium.WebDriver.SelfHealing/master/sample-healing-report/index.html
