@@ -12,19 +12,25 @@ namespace Sample.NUnit
         {
             var options = new ChromeOptions();
             var chromeDriver = new ChromeDriver(options);
+
+            // Now create self-healing WebDriver
             var selfHealingDriver = chromeDriver.ToSelfHealingDriver();
 
             try
             {
-                selfHealingDriver.Navigate().GoToUrl("https://www.nuget.org/packages/Selenium.WebDriver.SelfHealing");
+                selfHealingDriver
+                    .Navigate()
+                    .GoToUrl("https://www.nuget.org/packages/Selenium.WebDriver.SelfHealing");
 
-                var frameworksTab = By.CssSelector("#supportedframeworks-body-tab");
-                var frameworksTabHyperlink = selfHealingDriver.FindElement(frameworksTab);
+                var frameworksTabSelector = By.CssSelector("#supportedframeworks-body-tab");
+                var frameworksTabHyperlink = selfHealingDriver.FindElement(frameworksTabSelector);
                 var expectedTitle = frameworksTabHyperlink.Text;
 
                 // Now modify the page source manually
                 IJavaScriptExecutor js = selfHealingDriver;
-                js.ExecuteScript("arguments[0].setAttribute('id', 'some-id-was-changed')", frameworksTabHyperlink);
+                js.ExecuteScript(
+                    "arguments[0].setAttribute('id', 'some-id-was-changed')", 
+                    frameworksTabHyperlink);
 
                 // Catch failure using standard WebDriver
                 // This is to demonstrate failure 
@@ -35,13 +41,13 @@ namespace Sample.NUnit
                     // It's expected to fail!
                     var originalChromeWebDriver = selfHealingDriver.DelegateWebDriver;
 
-                    originalChromeWebDriver.FindElement(frameworksTab);
+                    originalChromeWebDriver.FindElement(frameworksTabSelector);
                 });
 
                 // Now we will demonstrate self-healing in action
                 // Using the Self-healing WebDriver this same search will succeed.
                 // After test execution, review the logs.
-                var healedElement = selfHealingDriver.FindElement(frameworksTab);
+                var healedElement = selfHealingDriver.FindElement(frameworksTabSelector);
                 var actualTitle = healedElement.Text;
 
                 // Now perform some assertions
@@ -50,6 +56,8 @@ namespace Sample.NUnit
             }
             finally
             {
+                // Clean up the driver afterward
+                // This will dispose the delegate WebDriver also
                 selfHealingDriver.Dispose();
             }
         }

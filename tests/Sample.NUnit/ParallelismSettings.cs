@@ -5,6 +5,7 @@
 
 namespace Sample.NUnit
 {
+    // ReSharper disable once UnusedMember.Global
     public class ParallelismSettings
     {
     }
