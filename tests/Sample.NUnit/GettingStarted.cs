@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using Selenium.WebDriver.SelfHealing;
+using Selenium.SelfHealing;
 
 namespace Sample.NUnit
 {
@@ -20,7 +20,7 @@ namespace Sample.NUnit
             {
                 selfHealingDriver
                     .Navigate()
-                    .GoToUrl("https://www.nuget.org/packages/Selenium.WebDriver.SelfHealing");
+                    .GoToUrl("https://www.nuget.org/packages/Selenium.SelfHealing.v4");
 
                 var frameworksTabSelector = By.CssSelector("#supportedframeworks-body-tab");
                 var frameworksTabHyperlink = selfHealingDriver.FindElement(frameworksTabSelector);
